@@ -363,6 +363,26 @@ public final class Crouton {
   }
 
   /**
+     * Creates a {@link Crouton} with provided text-resource and style for a given
+     * activity.
+     *
+     * @param activity
+     *     The {@link Activity} that represents the context in which the Crouton should exist.
+     * @param customView
+     *     The custom {@link View} to display
+     * @param viewGoup
+     *     The ViewGroup should be added to.
+     * @param configuration
+     *     The configuration for this crouton.
+     *
+     * @return The created {@link Crouton}.
+     */
+    public static Crouton make(Activity activity, View customView, ViewGroup viewGroup,
+                               final Configuration configuration) {
+        return new Crouton(activity, customView, viewGroup, configuration);
+    }
+
+  /**
    * Creates a {@link Crouton} with provided text and style for a given activity
    * and displays it directly.
    *

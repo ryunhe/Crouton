@@ -17,6 +17,18 @@ apply plugin: 'com.android.library'
 apply plugin: 'android-maven'
 apply plugin: 'signing'
 
+buildscript {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.12.0'
+        classpath 'com.github.dcendents:android-maven-plugin:1.0'
+    }
+}
+
 dependencies {
   compile 'com.android.support:support-v4:19.1.0'
 }
